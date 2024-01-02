@@ -46,7 +46,7 @@ If not `template_dir` is specified the default templates within this repository 
 Then create a keybinding, that calls `require('adr').create_from_template()`.
 
 ```lua
-map("n", "<leader>na", require('adr').create_from_template())
+map("n", "<leader>na", function() require('adr').create_from_template() end)
 ```
 
 ## 🤝 Contributing
