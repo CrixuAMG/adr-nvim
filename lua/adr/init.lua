@@ -33,7 +33,7 @@ M.create_from_template = function()
     vim.ui.select(
         templates,
         {
-            prompt_title = "Select template",
+            prompt = "Select template",
         },
         function(selected)
             if selected == nil then
@@ -50,7 +50,7 @@ end
 M.write_selected_to_path = function(template_name)
     vim.ui.input(
         {
-            prompt_title = "File name",
+            prompt = "File name",
         },
         function(file_name)
             M.write_to_path(template_name, file_name)
