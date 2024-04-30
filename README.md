@@ -38,7 +38,7 @@ After the installation you can configure the plugin by adding the following to y
 ```lua
 require('adr').setup({
     template_dir = "~/adr-templates",
-    doc_dir = "/docs/",
+    doc_dir = "docs",
 })
 ```
 

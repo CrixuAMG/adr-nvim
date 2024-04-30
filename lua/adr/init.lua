@@ -11,7 +11,7 @@ end
 
 M.config = {
     template_dir = vim.fs.dirname(debug.getinfo(1).source:sub(2)) .. "/../../templates",
-    doc_dir = '/docs',
+    doc_dir = 'docs',
 }
 
 M.setup = function(config)
