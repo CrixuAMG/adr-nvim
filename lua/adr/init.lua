@@ -1,3 +1,14 @@
+local has_telescope, telescope = pcall(require, "telescope")
+if has_telescope then
+    local telescope_adr_picker = require("adr.telescope.picker")
+
+    return telescope.register_extension({
+        exports = {
+            adr = telescope_adr_picker.adr_picker,
+        },
+    })
+end
+
 local M = {}
 
 local get_file_name = function(file)
