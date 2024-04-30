@@ -64,12 +64,13 @@ end
 
 M.write_to_path = function(template_name, file_name)
     local template = vim.fn.readfile(template_name)
+    local doc_dir_path = vim.fn.getcwd() .. '/' .. M.config.doc_dir
 
-    if vim.fn.isdirectory(vim.fn.getcwd() .. M.config.doc_dir) == 0 then
-        vim.fn.mkdir(vim.fn.getcwd() .. M.config.doc_dir, 'p')
+    if vim.fn.isdirectory(doc_dir_path) == 0 then
+        vim.fn.mkdir(doc_dir_path, 'p')
     end
 
-    local file = vim.fn.getcwd() .. M.config.doc_dir .. '/' .. file_name .. '.md'
+    local file = doc_dir_path .. '/' .. file_name .. '.md'
     if not file_exists(file) then
         vim.fn.writefile(template, file)
     end
