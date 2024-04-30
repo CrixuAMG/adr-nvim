@@ -38,10 +38,13 @@ After the installation you can configure the plugin by adding the following to y
 ```lua
 require('adr').setup({
     template_dir = "~/adr-templates",
+    doc_dir = "docs",
 })
 ```
 
 If not `template_dir` is specified the default templates within this repository will be used.
+
+Configuring the `doc_dir` parameter allows you to configure where newly created markdown files will be placed.
 
 Then create a keybinding, that calls `require('adr').create_from_template()`.
 
